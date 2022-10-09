@@ -1,6 +1,6 @@
 import React from "react";
 // Types
-import {AnswerObject} from "../App";
+import { AnswerObject } from "../App";
 // styles
 import { Wrapper, ButtonWrapper } from "./QuestionCard.styles";
 
@@ -27,11 +27,11 @@ const QuestionCard: React.FC<Props> = ({
     </p>
     <p dangerouslySetInnerHTML={{ __html: question }} />
     <div>
-      {answers.map(answer => (
+      {answers.map((answer) => (
         <ButtonWrapper
           key={answer}
-              correct={userAnswer?.correctAnswer === answer}
-              userClicked={userAnswer?.answer === answer}
+          correct={userAnswer?.correctAnswer === answer}
+          userClicked={userAnswer?.answer === answer}
         >
           <button
             disabled={userAnswer ? true : false}
